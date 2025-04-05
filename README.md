@@ -32,7 +32,8 @@
 + Windows 11 25H2 build 27695;
 + Windows 11 25H2 build 27723;
 + Windows 11 25H2 build 27729;
-+ Windows 11 25H2 build 27783.
++ Windows 11 25H2 build 27783;
++ Windows 11 25H2 build 27823.
 
 ** located in Compiled\Composition\X86_64\ntos
 
@@ -69,7 +70,8 @@ NT10 (Windows 10/11)
 + Windows 11 25H2 build 27695;
 + Windows 11 25H2 build 27723;
 + Windows 11 25H2 build 27729;
-+ Windows 11 25H2 build 27783.
++ Windows 11 25H2 build 27783;
++ Windows 11 25H2 build 27823.
 
 ** located in Compiled\Composition\X86_64\win32k
 
@@ -84,7 +86,8 @@ NT10 (Windows 10/11)
 ## IUM service tables
 
 + Windows 10 20H1 build 19041; * Note that 19042, 19043, 19044, 19045 are the same as 19041
-+ Windows 11 DEV build 25276.
++ Windows 11 DEV build 25276;
++ Windows 11 25H2 27823.
 
 ** located in Compiled\Composition\X86_64\ium
 
