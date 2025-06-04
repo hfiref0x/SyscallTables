@@ -8,8 +8,8 @@
 
 + Windows 2003 SP2 build 3790 also Windows XP 64;
 + Windows Vista RTM build 6000;
-+ Windows Vista SP2 build 6002;
-+ Windows 7 SP1 build 7601;
++ Windows Vista SP2 build 6002; * Note that it is identical for 6001 build
++ Windows 7 SP1 build 7601; * Note that it is identical for 7600 build
 + Windows 8 RTM build 9200;
 + Windows 8.1 build 9600;
 + Windows 10 TP build 10061;
