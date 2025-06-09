@@ -28,12 +28,6 @@
 + Windows 11 22H2 build 22621;
 + Windows 11 23H2 build 22631;
 + Windows 11 24H2 build 26120;
-+ Windows 11 25H2 build 27686;
-+ Windows 11 25H2 build 27695;
-+ Windows 11 25H2 build 27723;
-+ Windows 11 25H2 build 27729;
-+ Windows 11 25H2 build 27783;
-+ Windows 11 25H2 build 27823;
 + Windows 11 25H2 build 27842.
 
 ** located in Compiled\Composition\X86_64\ntos
@@ -67,12 +61,6 @@ NT10 (Windows 10/11)
 + Windows 11 22H2 build 22621;
 + Windows 11 23H2 build 22631;
 + Windows 11 24H2 build 26120;
-+ Windows 11 25H2 build 27686;
-+ Windows 11 25H2 build 27695;
-+ Windows 11 25H2 build 27723;
-+ Windows 11 25H2 build 27729;
-+ Windows 11 25H2 build 27783;
-+ Windows 11 25H2 build 27823;
 + Windows 11 25H2 build 27842.
 
 ** located in Compiled\Composition\X86_64\win32k
@@ -140,7 +128,7 @@ Uses Zydis x86/x86-64 disassembler and code generation library (https://github.c
 
 # Build
 
-Composer source code written in C#. In order to build from source you need Microsoft Visual Studio version 2022 and higher and .NET Framework version 4.5 and higher. Both scg and wscg source code written in C. In order to build from source you need Microsoft Visual Studio version 2022 with SDK 19041 or higher installed.
+Composer source code written in C#. In order to build from source you need Microsoft Visual Studio version 2022 and higher and .NET Framework version 4.8 and higher. Both scg and wscg source code written in C. In order to build from source you need Microsoft Visual Studio version 2022 with SDK 19041 or higher installed.
 
 # Authors
 
