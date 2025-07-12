@@ -315,6 +315,7 @@ NtQuerySystemEnvironmentValue	352
 NtQuerySystemEnvironmentValueEx	353
 NtQuerySystemInformation	54
 NtQuerySystemInformationEx	354
+NtQuerySystemTime	91
 NtQueryTimer	56
 NtQueryTimerResolution	355
 NtQueryValueKey	23
