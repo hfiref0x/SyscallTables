@@ -35,10 +35,10 @@
 **Located in** `Compiled\Composition\X86_64\ntos`
 
 NT6 (Windows Vista/7/8/8.1) + bonus NT5.2 (Windows XP x64)  
-**View online:** https://hfiref0x.github.io/X86_64/NT6_syscalls.html
+**View online:** https://hfiref0x.github.io/sctables/X86_64/NT6_syscalls.html
 
 NT10 (Windows 10/11)  
-**View online:** https://hfiref0x.github.io/X86_64/NT10_syscalls.html
+**View online:** https://hfiref0x.github.io/sctables/X86_64/NT10_syscalls.html
 
 ## Win32k service tables
 
@@ -67,10 +67,10 @@ NT10 (Windows 10/11)
 **Located in** `Compiled\Composition\X86_64\win32k`
 
 NT6 (Windows Vista/7/8/8.1)  
-**View online:** https://hfiref0x.github.io/X86_64/NT6_w32ksyscalls.html
+**View online:** https://hfiref0x.github.io/sctables/X86_64/NT6_w32ksyscalls.html
 
 NT10 (Windows 10/11)  
-**View online:** https://hfiref0x.github.io/X86_64/NT10_w32ksyscalls.html
+**View online:** https://hfiref0x.github.io/sctables/X86_64/NT10_w32ksyscalls.html
 
 ## IUM service tables
 
@@ -81,7 +81,7 @@ NT10 (Windows 10/11)
 **Located in** `Compiled\Composition\X86_64\ium`
 
 NT10 (Windows 10/11)  
-**View online:** https://hfiref0x.github.io/X86_64/NT10_iumsyscalls.html
+**View online:** https://hfiref0x.github.io/sctables/X86_64/NT10_iumsyscalls.html
 
 # ARM64
 
@@ -93,7 +93,7 @@ NT10 (Windows 10/11)
 **Located in** `Compiled\Composition\ARM64\ntos`
 
 NT10 (Windows 10/11)  
-**View online:** https://hfiref0x.github.io/ARM64/syscalls.html
+**View online:** https://hfiref0x.github.io/sctables/ARM64/syscalls.html
 
 ## Win32k service tables
 
@@ -103,7 +103,7 @@ NT10 (Windows 10/11)
 **Located in** `Compiled\Composition\ARM64\win32k`
 
 NT10 (Windows 10/11)  
-**View online:** https://hfiref0x.github.io/ARM64/w32ksyscalls.html
+**View online:** https://hfiref0x.github.io/sctables/ARM64/w32ksyscalls.html
 
 # Usage
 
