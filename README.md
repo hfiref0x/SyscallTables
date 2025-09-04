@@ -29,8 +29,8 @@
 - Windows 11 22H2 build 22621
 - Windows 11 23H2 build 22631
 - Windows 11 24H2 build 26120
-- Windows 11 25H2 build 27842
-- Windows 11 25H2 build 27881
+- Windows 11 24H2 build 26200
+- Windows 11 25H2 build 27924
 
 **Located in** `Compiled\Composition\X86_64\ntos`
 
@@ -61,8 +61,8 @@ NT10 (Windows 10/11)
 - Windows 11 22H2 build 22621
 - Windows 11 23H2 build 22631
 - Windows 11 24H2 build 26120
-- Windows 11 25H2 build 27842
-- Windows 11 25H2 build 27881
+- Windows 11 24H2 build 26200
+- Windows 11 25H2 build 27924
 
 **Located in** `Compiled\Composition\X86_64\win32k`
 
