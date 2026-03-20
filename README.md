@@ -33,6 +33,7 @@
 - Windows 11 26H2 build 27924
 - Windows 11 26H2 build 27975
 - Windows 11 26H1 build 28020
+- Windows 11 26H1 build 29550
 
 **Located in** `Compiled\Composition\X86_64\ntos`
 
@@ -67,6 +68,7 @@ NT10 (Windows 10/11)
 - Windows 11 26H2 build 27924
 - Windows 11 26H2 build 27975
 - Windows 11 26H1 build 28020
+- Windows 11 26H1 build 29550
 
 **Located in** `Compiled\Composition\X86_64\win32k`
 
