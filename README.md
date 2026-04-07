@@ -30,10 +30,12 @@
 - Windows 11 23H2 build 22631
 - Windows 11 24H2 build 26120
 - Windows 11 25H2 build 26200
-- Windows 11 26H2 build 27924
-- Windows 11 26H2 build 27975
+- Windows 11 26H2 build 26300
+- Windows 11 27H2 build 27924
+- Windows 11 27H2 build 27975
 - Windows 11 26H1 build 28020
-- Windows 11 26H1 build 29550
+- Windows 11 27H2 build 29550
+- Windows 11 27H2 build 29560
 
 **Located in** 
 + `data\Composition\X86_64\NT6\ntos` (NT6+)
@@ -71,10 +73,12 @@ NT10 (Windows 11)
 - Windows 11 23H2 build 22631
 - Windows 11 24H2 build 26120
 - Windows 11 25H2 build 26200
-- Windows 11 26H2 build 27924
-- Windows 11 26H2 build 27975
+- Windows 11 26H2 build 26300
+- Windows 11 27H2 build 27924
+- Windows 11 27H2 build 27975
 - Windows 11 26H1 build 28020
-- Windows 11 26H1 build 29550
+- Windows 11 27H2 build 29550
+- Windows 11 27H2 build 29560
 
 **Located in** 
 + `data\Composition\X86_64\NT6\win32k` (NT6+)
