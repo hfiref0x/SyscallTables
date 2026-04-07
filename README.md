@@ -43,7 +43,7 @@ NT6 (Windows Vista/7/8/8.1) + bonus NT5.2 (Windows XP x64)
 NT10 (Windows 10)  
 **View online:** https://hfiref0x.github.io/sctables/X86_64/NT10_syscalls.html
 
-NT10 (Windows 11)
+NT10 (Windows 11)  
 **View online:** https://hfiref0x.github.io/sctables/X86_64/W11_syscalls.html
 
 ## Win32k service tables
