@@ -35,7 +35,10 @@
 - Windows 11 26H1 build 28020
 - Windows 11 26H1 build 29550
 
-**Located in** `Compiled\Composition\X86_64\ntos`
+**Located in** 
++ `data\Composition\X86_64\NT6\ntos` (NT6+)
++ `data\Composition\X86_64\NT10\ntos` (Windows 10)
++ `data\Composition\X86_64\W11\ntos` (Windows 11)
 
 NT6 (Windows Vista/7/8/8.1) + bonus NT5.2 (Windows XP x64)  
 **View online:** https://hfiref0x.github.io/sctables/X86_64/NT6_syscalls.html
@@ -73,7 +76,10 @@ NT10 (Windows 11)
 - Windows 11 26H1 build 28020
 - Windows 11 26H1 build 29550
 
-**Located in** `Compiled\Composition\X86_64\win32k`
+**Located in** 
++ `data\Composition\X86_64\NT6\win32k` (NT6+)
++ `data\Composition\X86_64\NT10\win32k` (Windows 10)
++ `data\Composition\X86_64\W11\win32k` (Windows 11)
 
 NT6 (Windows Vista/7/8/8.1)  
 **View online:** https://hfiref0x.github.io/sctables/X86_64/NT6_w32ksyscalls.html
@@ -90,7 +96,9 @@ NT10 (Windows 11)
 - Windows 11 DEV build 25276
 - Windows 11 25H2 build 27823
 
-**Located in** `Compiled\Composition\X86_64\ium`
+**Located in** 
++ `data\Composition\X86_64\NT10\ium` (Windows 10)
++ `data\Composition\X86_64\W11\ium` (Windows 11)
 
 NT10 (Windows 10/11)  
 **View online:** https://hfiref0x.github.io/sctables/X86_64/NT10_iumsyscalls.html
@@ -102,7 +110,7 @@ NT10 (Windows 10/11)
 - Windows 11 23H2 build 22631
 - Windows 11 24H2 build 26100
 
-**Located in** `Compiled\Composition\ARM64\ntos`
+**Located in** `data\Composition\ARM64\ntos`
 
 NT10 (Windows 10/11)  
 **View online:** https://hfiref0x.github.io/sctables/ARM64/syscalls.html
@@ -112,7 +120,7 @@ NT10 (Windows 10/11)
 - Windows 11 23H2 build 22631
 - Windows 11 24H2 build 26100
 
-**Located in** `Compiled\Composition\ARM64\win32k`
+**Located in** `data\Composition\ARM64\win32k`
 
 NT10 (Windows 10/11)  
 **View online:** https://hfiref0x.github.io/sctables/ARM64/w32ksyscalls.html
