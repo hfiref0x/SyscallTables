@@ -40,8 +40,11 @@
 NT6 (Windows Vista/7/8/8.1) + bonus NT5.2 (Windows XP x64)  
 **View online:** https://hfiref0x.github.io/sctables/X86_64/NT6_syscalls.html
 
-NT10 (Windows 10/11)  
+NT10 (Windows 10)  
 **View online:** https://hfiref0x.github.io/sctables/X86_64/NT10_syscalls.html
+
+NT10 (Windows 11)
+**View online:** https://hfiref0x.github.io/sctables/X86_64/W11_syscalls.html
 
 ## Win32k service tables
 
@@ -75,8 +78,11 @@ NT10 (Windows 10/11)
 NT6 (Windows Vista/7/8/8.1)  
 **View online:** https://hfiref0x.github.io/sctables/X86_64/NT6_w32ksyscalls.html
 
-NT10 (Windows 10/11)  
+NT10 (Windows 10)  
 **View online:** https://hfiref0x.github.io/sctables/X86_64/NT10_w32ksyscalls.html
+
+NT10 (Windows 11)  
+**View online:** https://hfiref0x.github.io/sctables/X86_64/W11_w32ksyscalls.html
 
 ## IUM service tables
 
@@ -132,9 +138,9 @@ Uses [Zydis x86/x86-64 disassembler and code generation library](https://github.
 # Build
 
 Composer source code is written in C#.  
-To build from source, you need Microsoft Visual Studio 2022 or higher and .NET Framework 4.8 or higher.  
+To build from source, you need Microsoft Visual Studio 2022 or higher (2026 recommended) and NET 10 or higher.  
 Both `scg` and `wscg` source code are written in C.  
-To build from source, you need Microsoft Visual Studio 2022 with SDK 19041 or higher installed.
+To build from source, you need Microsoft Visual Studio 2022 with SDK 19041 or higher installed (2026 and latest SDK recommended).
 
 # Authors
 
