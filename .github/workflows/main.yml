@@ -1,0 +1,70 @@
+name: Build SyscallTables
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+  workflow_dispatch:
+
+env:
+  BUILD_CONFIGURATION: Release
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v3
+
+      - name: Setup .NET 10 SDK
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Build scg x86
+        working-directory: ./src/scg
+        run: msbuild scg.vcxproj /m /p:Platform=Win32 /p:Configuration=${{ env.BUILD_CONFIGURATION }} /p:PlatformToolset=v143
+
+      - name: Build scg x64
+        working-directory: ./src/scg
+        run: msbuild scg.vcxproj /m /p:Platform=x64 /p:Configuration=${{ env.BUILD_CONFIGURATION }} /p:PlatformToolset=v143
+
+      - name: Publish sstc x64
+        working-directory: ./src/sstComposer
+        run: dotnet publish sstc.csproj -c ${{ env.BUILD_CONFIGURATION }} -p:PublishProfile=FolderProfile
+
+      - name: Collect snapshot files
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path Package\Application | Out-Null
+
+          $scg32 = "src\scg\output\Win32\${{ env.BUILD_CONFIGURATION }}\scg32.exe"
+          $scg64 = "src\scg\output\x64\${{ env.BUILD_CONFIGURATION }}\scg64.exe"
+          $sstc = "src\sstComposer\bin\${{ env.BUILD_CONFIGURATION }}\net10.0\publish\win-x64\sstc.exe"
+
+          if (!(Test-Path $scg32)) {
+            throw "scg32.exe not found at $scg32"
+          }
+
+          if (!(Test-Path $scg64)) {
+            throw "scg64.exe not found at $scg64"
+          }
+
+          if (!(Test-Path $sstc)) {
+            throw "sstc.exe not found at $sstc"
+          }
+
+          Copy-Item $scg32 "Package\Application\scg32.exe" -Force
+          Copy-Item $scg64 "Package\Application\scg64.exe" -Force
+          Copy-Item $sstc "Package\Application\sstc.exe" -Force
+
+      - name: Upload scg/sst snapshot
+        uses: actions/upload-artifact@v6
+        with:
+          name: scg_sst_snapshot.zip
+          path: Package\Application\*
