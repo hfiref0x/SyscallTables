@@ -1,12 +1,12 @@
 ﻿/*******************************************************************************
 *
-*  (C) COPYRIGHT AUTHORS, 2014 - 2025
+*  (C) COPYRIGHT AUTHORS, 2014 - 2026
 *
 *  TITLE:       PROGRAM.CS
 *
-*  VERSION:     2.10
+*  VERSION:     2.20
 *
-*  DATE:        29 Jun 2025
+*  DATE:        05 Apr 2026
 *
 *  SSTC entrypoint - System Service Table Composer
 * 
@@ -19,6 +19,7 @@
 
 using System.Diagnostics;
 using System.Globalization;
+using System.Net;
 using System.Reflection;
 using System.Text;
 using System.Text.Json;
@@ -150,12 +151,12 @@ public class SyscallTableProcessor
 
             if (matchA.Success && matchB.Success)
             {
-                int av = int.Parse(matchA.Value);
-                int bv = int.Parse(matchB.Value);
+                int av = int.Parse(matchA.Value, NumberStyles.Integer, CultureInfo.InvariantCulture);
+                int bv = int.Parse(matchB.Value, NumberStyles.Integer, CultureInfo.InvariantCulture);
                 return av.CompareTo(bv);
             }
 
-            return string.Compare(Path.GetFileName(a), Path.GetFileName(b));
+            return string.Compare(Path.GetFileName(a), Path.GetFileName(b), StringComparison.Ordinal);
         });
     }
 
@@ -192,7 +193,7 @@ public class SyscallTableProcessor
                     }
 
                     string serviceName = line[..tabIndex];
-                    if (!int.TryParse(line[(tabIndex + 1)..], out int syscallId))
+                    if (!int.TryParse(line[(tabIndex + 1)..], NumberStyles.Integer, CultureInfo.InvariantCulture, out int syscallId))
                     {
                         if (_verbose)
                             Console.WriteLine($"Warning: Invalid syscall ID in {tablePath}: {line}");
@@ -305,7 +306,7 @@ public class SyscallTableProcessor
     }
 
     private static string EscapeCsvField(string field) =>
-        (field.Contains(",") || field.Contains("\"") || field.Contains("\n"))
+        (field.Contains(",") || field.Contains("\"") || field.Contains("\n") || field.Contains("\r"))
             ? $"\"{field.Replace("\"", "\"\"")}\""
             : field;
 
@@ -349,8 +350,10 @@ public class SyscallTableProcessor
             _ => "NT OS System Service Table",
         };
 
+        string encodedTableTitle = WebUtility.HtmlEncode(tableTitle);
+
         writer.Write("<!DOCTYPE html><html><head><title>");
-        writer.Write(tableTitle);
+        writer.Write(encodedTableTitle);
         writer.Write("</title><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><style>");
         writer.Write(css);
         writer.Write("</style><script>");
@@ -362,9 +365,9 @@ public class SyscallTableProcessor
         writer.Write("<strong>Select:</strong>");
         writer.Write("</div>");
 
-        writer.Write($"<table><caption>{tableTitle}</caption><tr><th>#</th><th>ServiceName</th>");
+        writer.Write($"<table><caption>{encodedTableTitle}</caption><tr><th>#</th><th>ServiceName</th>");
         foreach (string version in _tableVersions)
-            writer.Write($"<th>{version}</th>");
+            writer.Write($"<th>{WebUtility.HtmlEncode(version)}</th>");
         writer.Write("</tr>");
 
         int index = 1;
@@ -372,7 +375,7 @@ public class SyscallTableProcessor
         {
             foreach (var entry in group)
             {
-                writer.Write($"<tr><td>{index}</td><td>{entry.ServiceName}</td>");
+                writer.Write($"<tr><td>{index}</td><td>{WebUtility.HtmlEncode(entry.ServiceName)}</td>");
                 foreach (string v in _tableVersions)
                 {
                     writer.Write("<td>");
