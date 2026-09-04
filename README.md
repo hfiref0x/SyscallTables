@@ -33,6 +33,7 @@
 - Windows 11 26H2 build 26300
 - Windows 11 27H2 build 27975
 - Windows 11 26H1 build 28020
+- Windows 11 26H1 build 28120
 - Windows 11 27H2 build 29599
 - Windows 11 27H2 build 29617
 
@@ -77,6 +78,7 @@ NT10 (Windows 11)
 - Windows 11 26H2 build 26300
 - Windows 11 27H2 build 27975
 - Windows 11 26H1 build 28020
+- Windows 11 26H1 build 28120
 - Windows 11 27H2 build 29599
 - Windows 11 27H2 build 29617
 
