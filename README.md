@@ -36,6 +36,7 @@
 - Windows 11 26H1 build 28120
 - Windows 11 27H2 build 29599
 - Windows 11 27H2 build 29617
+- Windows 11 27H2 build 29695
 
 *July 2026 state, see [#3](https://github.com/hfiref0x/SyscallTables/issues/3), [#5](https://github.com/hfiref0x/SyscallTables/issues/5), [#6](https://github.com/hfiref0x/SyscallTables/issues/6) for more info
 
@@ -81,6 +82,7 @@ NT10 (Windows 11)
 - Windows 11 26H1 build 28120
 - Windows 11 27H2 build 29599
 - Windows 11 27H2 build 29617
+- Windows 11 27H2 build 29695
 
 *July 2026 state, see [#3](https://github.com/hfiref0x/SyscallTables/issues/3), [#5](https://github.com/hfiref0x/SyscallTables/issues/5), [#6](https://github.com/hfiref0x/SyscallTables/issues/6) for more info
 
